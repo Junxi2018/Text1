@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title></title>
+		<style>
+			
+		</style>
+		<script>
+			/*
+				Object.assign(target,[obj1,obj2....])
+					作用：合并对象，把从第二参数之后的对象的属性都合并到第一个对象上
+			*/
+
+			let obj1 = {
+				a:1,
+				b:2
+			}
+
+			let obj2 = {
+				c:1,
+				d:2
+			}
+
+			// 把obj2的属性合并到obj1身上
+			for(let attr in obj2){
+				obj1[attr] = obj2[attr]
+			}
+
+			console.log(obj1);
+
+
+		</script>
+	</head>
+
+	<body>
+		
+	</body>
+</html>

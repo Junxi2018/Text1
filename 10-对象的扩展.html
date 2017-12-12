@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title></title>
+		<style>
+			
+		</style>
+		<script>
+			/*
+				简洁的表示法
+					1. 对象的key值和变量名一项，可以在定义对象时候，直接写变量名
+					2. 简写函数
+						key: function (){
+								
+						}
+						简写为：
+						key(){
+							
+						}
+
+				key值可以通过表达式计算得到
+					语法：
+						{
+							[表达式]:值
+						}
+			*/
+
+			let a = 'miaov123';
+			let b = 'ketang'
+
+			// key值是 'miaovketang'
+
+			let o = {
+				[a+b]:1,
+				['m'+1]: 123
+			}
+			console.log(o);
+
+
+		</script>
+	</head>
+
+	<body>
+		
+	</body>
+</html>

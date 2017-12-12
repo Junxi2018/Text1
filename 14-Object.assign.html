@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title></title>
+		<style>
+			
+		</style>
+		<script>
+			/*
+				Object.assign(target,[obj1,obj2....])
+					作用：合并对象，把从第二参数之后的对象的属性都合并到第一个对象上
+					返回值：是第一个参数的对象
+
+					注意：相同的属性，后面的对象的属性会覆盖前面的
+
+			*/
+
+			// 复制（克隆）一个对象
+
+			let obj = {
+				a:1,
+				b:2,
+				arr:[1,2,3,4]
+			}
+			// 只能够浅复制
+			let newObj = Object.assign({},obj);
+
+			newObj.arr.push(111111);
+
+			console.log(obj);
+
+
+
+		</script>
+	</head>
+
+	<body>
+		
+	</body>
+</html>

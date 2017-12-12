@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title></title>
+		<style>
+			
+		</style>
+		<script>
+			/*
+				Object.assign(target,[obj1,obj2....])
+					作用：合并对象，把从第二参数之后的对象的属性都合并到第一个对象上
+					返回值：是第一个参数的对象
+
+			*/
+
+			let obj1 = {
+				a:1,
+				b:2
+			}
+
+			let obj2 = {
+				c:1,
+				d:2
+			}
+
+			let obj123 = Object.assign(obj1,obj2);
+
+			console.log(obj1);
+			console.log(obj123);
+
+			console.log( obj123 === obj1 );
+
+			// console.log({a:1,b:2} === {a:1,b:2}); false
+			let o = {a:1,b:2}
+			let o1 = o;
+			// 两个变量用的是同一个对象的地址
+			//console.log(o === o1);  // true
+		</script>
+	</head>
+
+	<body>
+		
+	</body>
+</html>

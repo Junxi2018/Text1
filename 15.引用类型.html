@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title></title>
+		<style>
+			
+		</style>
+		<script>
+			
+			/*
+				简单类型
+					Null Undefined String Number Boolean
+				引用类型
+					Object
+			*/
+
+			let a = 1;
+			let b = a;
+			b = 10;  // 把b这个变量重新赋值了
+
+			let  arr = [1,2,3];
+			let arr2 = arr;
+			arr2 = 10; // 把arr2这个变量重新赋值了
+
+			let obj = {a:1}
+			let obj2 = obj;
+			obj.b = 10;
+
+			console.log(obj2);
+
+			let o = {
+				a: {
+					b: [1,2,3]
+				}
+			}
+
+			let oarr = o.a.b;  // 通过属性操作找到数组，把数组的地址赋值给oarr,oarr和对象中的数组是同一个
+
+			oarr.push(1111);
+
+			console.log(o.a.b);
+
+
+
+		</script>
+	</head>
+
+	<body>
+		
+	</body>
+</html>

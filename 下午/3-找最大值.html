@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title></title>
+		<style>
+			
+		</style>
+		<script>
+			/*
+				扩展运算符
+					语法：...数组|对象|字符串
+					把对象的值扩展到当前对象上,或者传参
+			*/
+
+			let arr = [3,4,6,8,16,78,100,5]
+
+			// 从这里面找到最大值
+			//console.log(Math.max(3,4,5,6));
+
+			console.log(Math.max(...arr));
+
+			function fn(...arg){ // rest参数
+			}
+
+			fn(1,2,3,4)
+
+		</script>
+	</head>
+
+	<body>
+		
+	</body>
+</html>

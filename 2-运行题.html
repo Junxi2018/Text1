@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title></title>
+		<style>
+			
+		</style>
+		<script>
+			/*
+				箭头函数
+					语法： 形参列表 => 函数体
+
+					特点：
+						1. 箭头函数中的this，绑定的是所在作用域上下文的this
+
+				写成函数表达式
+			*/
+
+
+
+
+		</script>
+	</head>
+
+	<body>
+		<ul id="list">
+			<li>1</li>
+			<li>2</li>
+			<li>3</li>
+		</ul>
+		<script>
+			/*
+				this:
+					1. 全局 => 顶层对象  window
+					2. 函数中 
+						a. 普通的函数，this值是在调用时候确定的
+						b. 箭头函数 绑定的是定义时候所在所用域的this
+			*/
+
+			// 1
+			let miaov = 10; // 不会把这个变量绑在window
+			let o = {
+				miaov:20,
+				fn: () => {  // 函数所在全局的作用域
+					// this => window
+					console.log(this.miaov);
+					return function (){
+						console.log(this.miaov);	
+					}	
+				}
+			}
+			// 右边先执行，执行完之后得到返回值赋值给左边
+			// 左边执行完成之后，得到一个普通的函数
+			let f = o.fn();
+
+			// 直接调用
+			f();
+
+
+
+		</script>
+	</body>
+</html>

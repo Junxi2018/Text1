@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title></title>
+		<style>
+			
+		</style>
+		<script>
+			/*
+				Array.from()
+					语法：Array.from(arrayLike [, mapFn, thisArg])
+					参数：
+						1. 要转成数组的类数组
+						2. 回调函数
+							对类数组每一项进行处理，回到函数函数的额返回值要放在新数组中
+						3. 改变回调函数this指向的
+
+					返回值：
+						新的数组，数组的每一项是类数组的每一项
+
+				forEach(callback,改变回调函数this指向的)
+				map(callback,改变回调函数this指向的)
+				filter()
+				every()
+				some(callback,改变回调函数this指向的)
+				find()
+				findIndex(callback,改变回调函数this指向的)
+			*/
+
+			window.onload = function(){
+				let lis = document.getElementsByTagName('li');
+
+				//console.log(Array.from(lis));
+				let newArr = Array.from(lis,function (item,index){
+					console.log(item,index);
+					console.log(this);
+					return item.innerHTML;
+				},[1,2,3])
+
+				console.log(newArr);
+
+			};
+
+		</script>
+	</head>
+
+	<body>
+		<ul id="list">
+			<li>123</li>
+			<li>123</li>
+			<li>123</li>
+		</ul>
+	</body>
+</html>

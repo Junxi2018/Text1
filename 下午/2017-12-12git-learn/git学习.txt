@@ -1,0 +1,57 @@
+﻿git 工具，版本管理工具
+
+理解git的三个区：
+	1. 工作区，就是开发项目的目录
+	2. 缓存区，工作区到版本库中间做缓存的区域
+	3. 版本库，最终成型的项目
+
+常用的命令：
+	1. 把本地的目录作为工作区，让git管理这个目录
+		初始化：git init
+		敲完命令之后，会在本目录下创建一个文件夹.git
+		注意：初始化命令只敲一次
+	2. 把工作区的文件放到缓存区
+		git add .或者 具体的文件名字
+	3. 缓存区加到版本库
+		git commit -m '这里写日志'
+	4. 查看日志
+		git log
+
+配置本机的用户名和邮箱(只需要一次)
+	git config --global user.name "你的名字"
+	git config --global user.email "你的邮箱"
+
+查看是否配置上：
+	git config --list
+
+
+git链接github
+	1. 需要先生成一个私钥和公钥
+		ssh-keygen -t rsa -C "你的邮箱"
+		敲这个命令之后，一路回车
+		看到奇怪的符号说明生成成功过了
+	2. 会在.ssh目录下生成两个文件
+		id_rsa 私钥
+		id_rsa.pub  公钥
+
+	3. 把公钥添加到github中
+		具体参考图片git连接github
+	4.检测是否链接成功
+		ssh git@github.com
+		出现你的用户名就成功了
+
+github
+	是托管代码的网站
+	1. 新建一个仓库
+	2. 填写仓库名
+	3. 在本地的版本库中添加远程的仓库地址
+		git remote add origin 你的github仓库地址(git@github.com:Junxi2018/Text1---.git)
+		git push -u origin master
+
+工作区变更了，需要传到github上，步骤
+	1. git add .
+	2. git commit -m '日志'
+	3. git push
+
+克隆别人的仓库到自己本地：
+	git clone 仓库地址
